@@ -10,8 +10,8 @@ import CovidData.restapi.Entity.Covid;
 @Repository
 public interface CovidRepository extends JpaRepository<Covid, Integer>{
 	
-	@Query(value="Select * from covid1 where patient_number = :id and gender = :gender",nativeQuery = true)
+	@Query(value="Select * from covid1 where patient_number = :id",nativeQuery = true)
 	
-    public Covid findDataByQuery(@Param("id") int id,@Param("gender") String gender);
+    public Covid findDataByQuery(@Param("id") int id);
 	
 }

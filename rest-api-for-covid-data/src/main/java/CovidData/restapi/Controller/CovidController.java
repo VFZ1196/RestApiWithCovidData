@@ -30,8 +30,8 @@ public class CovidController {
 	*/
 	
 	//Get Records by id but with the help of query 
-	@GetMapping("/byQuery/{id}/{gender}")
-	public Covid GetByQuery(@PathVariable("id") int patient_number,@PathVariable("gender") String gender) {
-		return covidRepository.findDataByQuery(patient_number,gender);
+	@GetMapping("/byQuery/{id}")
+	public Covid GetByQuery(@PathVariable("id") int patient_number) {
+		return covidRepository.findDataByQuery(patient_number);
 	}
 }
